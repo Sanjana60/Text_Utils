@@ -26,25 +26,30 @@ function App() {
       setmode('dark');
       document.body.style.backgroundColor = '#042743';
       showalert("Dark Mode has been enabled","Success");
+      document.title = 'Text Utils- Dark Mode'
     }
     else{
       setmode('light');
       document.body.style.backgroundColor = 'white';
       showalert("Light Mode has been enabled","Success");
+      document.title = 'Text Utils- Light Mode'
     }
   }
 
   const info=()=>{
       document.body.style.backgroundColor = 'aqua';
       showalert("Aqua Mode has been enabled","Success");
+      document.title = 'Text Utils- Aqua Mode'
   }
   const danger=()=>{
     document.body.style.backgroundColor = 'red';
     showalert("Red Mode has been enabled","Success");
+    document.title = 'Text Utils- Red Mode'
 }
 const warning=()=>{
   document.body.style.backgroundColor = 'yellow';
   showalert("Yellow Mode has been enabled","Success");
+  document.title = 'Text Utils- Yellow Mode'
 }
   return (
     <>

@@ -22,7 +22,7 @@ function App() {
     <NavBar title ="TextUtils" mode={mode} tooglemode={tooglemode} about ="AboutUs"/>
 
     <div className="container my-3">
-    <TextForm heading = "Enter the text to Analyze"/>
+    <TextForm heading = "Enter the text to Analyze" mode={mode}/>
     {/* <About/> */}
     </div>
 

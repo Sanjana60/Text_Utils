@@ -13,7 +13,7 @@ export default function About() {
             setmystyle({
                 color: 'black',
                 backgroundColor:'white',
-                border: '2px solid white'
+                border: '2px solid black'
             })
             setbtntext('Enable Dark Mode')
         }

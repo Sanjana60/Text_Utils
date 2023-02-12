@@ -19,10 +19,10 @@ export default function NavBar(props) {
         </li>
        
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-primary" type="submit">Search</button>
-      </form>
+      <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+</div>
     </div>
   </div>
 </nav>

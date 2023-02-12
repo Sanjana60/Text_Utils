@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
+import Alert from './components/Alert';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
     <NavBar title ="TextUtils" mode={mode} tooglemode={tooglemode} about ="AboutUs"/>
-
+    <Alert alert="This is Alert"/>
     <div className="container my-3">
     <TextForm heading = "Enter the text to Analyze" mode={mode}/>
     {/* <About/> */}

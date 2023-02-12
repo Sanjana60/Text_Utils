@@ -16,7 +16,9 @@ function App() {
       ty:type}
       
       )
-    
+    setTimeout(() => {
+      setalert("")
+    }, 1200);
 
   }
   const tooglemode =()=>{
@@ -31,9 +33,22 @@ function App() {
       showalert("Light Mode has been enabled","Success");
     }
   }
+
+  const info=()=>{
+      document.body.style.backgroundColor = 'aqua';
+      showalert("Aqua Mode has been enabled","Success");
+  }
+  const danger=()=>{
+    document.body.style.backgroundColor = 'red';
+    showalert("Red Mode has been enabled","Success");
+}
+const warning=()=>{
+  document.body.style.backgroundColor = 'yellow';
+  showalert("Yellow Mode has been enabled","Success");
+}
   return (
     <>
-    <NavBar title ="TextUtils" mode={mode} tooglemode={tooglemode} about ="AboutUs"/>
+    <NavBar title ="TextUtils" mode={mode} tooglemode={tooglemode} info={info} danger={danger} warning={warning} about ="AboutUs"/>
     <Alert alert={alert}/>
     <div className="container my-3">
     <TextForm heading = "Enter the text to Analyze" mode={mode} showalert={showalert}/>

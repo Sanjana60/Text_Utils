@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function NavBar(props) {
+
+  
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
@@ -19,6 +21,12 @@ export default function NavBar(props) {
         </li>
        
       </ul>
+      <div className="mx-2">
+      <button type="button" className="btn btn-info" onClick={props.info} style={{margin:5}}>Info</button>
+      <button type="button" class="btn btn-danger" onClick={props.danger} style={{margin:5}}>Danger</button>
+      <button type="button" class="btn btn-warning" onClick={props.warning} style={{margin:5}}>Warning</button>
+      </div>
+      
       <div class="form-check form-switch">
   <input class="form-check-input"  onClick={props.tooglemode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
   <label class="form-check-label" HTMLfor="flexSwitchCheckDefault">Enable Dark Mode</label>

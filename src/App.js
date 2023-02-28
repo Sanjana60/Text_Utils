@@ -1,9 +1,16 @@
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import NavBar from './components/NavBar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
 import Alert from './components/Alert';
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams
+} from "react-router-dom";
 
 function App() {
 
@@ -53,14 +60,23 @@ const warning=()=>{
 }
   return (
     <>
+    <Router>
     <NavBar title ="TextUtils" mode={mode} tooglemode={tooglemode} info={info} danger={danger} warning={warning} about ="AboutUs"/>
     <Alert alert={alert}/>
     <div className="container my-3">
-    <TextForm heading = "Enter the text to Analyze" mode={mode} showalert={showalert}/>
-    {/* <About/> */}
+    <Switch>
+      <Route exact path="/about">
+      <About/>
+      </Route>
+      <Route path="/">
+      <TextForm heading = "Enter the text to Analyze" mode={mode} showalert={showalert}/>
+      </Route>
+    </Switch>
+    
+    
     </div>
 
-    
+    </Router>
     </>
   );
 }

@@ -4,13 +4,13 @@ import NavBar from './components/NavBar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
 import Alert from './components/Alert';
-import ReactDOM from "react-dom";
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useParams
 } from "react-router-dom";
+
 
 function App() {
 
@@ -65,7 +65,7 @@ const warning=()=>{
     <Alert alert={alert}/>
     <div className="container my-3">
     <Switch>
-      <Route exact path="/about">
+      <Route path="/about">
       <About/>
       </Route>
       <Route path="/">
